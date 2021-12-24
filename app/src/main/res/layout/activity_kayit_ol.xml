@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.KayitOlActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/info_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="45dp"
+                android:gravity="top|center"
+                android:text="OZK Veterinary Client"
+                android:textColor="#0D406C"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="165dp"
+                android:layout_height="128dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/cat" />
+
+            <EditText
+                android:id="@+id/registerMailAddress"
+                android:layout_width="322dp"
+                android:layout_height="55dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/custom_input"
+                android:drawableStart="@drawable/custom_email_icon"
+                android:drawableLeft="@drawable/ic_email"
+                android:drawablePadding="12dp"
+                android:ems="10"
+                android:hint="Enter Your Email Address"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp" />
+
+            <EditText
+                android:id="@+id/registerUserName"
+                android:layout_width="322dp"
+                android:layout_height="55dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="7dp"
+                android:background="@drawable/custom_input"
+                android:drawableStart="@drawable/custom_person_icon"
+                android:drawableLeft="@drawable/ic_person"
+                android:drawablePadding="12dp"
+                android:ems="10"
+                android:hint="Enter Your Name"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp" />
+
+
+            <EditText
+                android:id="@+id/registerPassword"
+                android:layout_width="322dp"
+                android:layout_height="55dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="7dp"
+                android:background="@drawable/custom_input"
+                android:drawableStart="@drawable/custom_lock_icon"
+                android:drawableLeft="@drawable/ic_email"
+                android:drawablePadding="12dp"
+                android:ems="10"
+                android:hint="Enter Your Password"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp" />
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/kayitOLButon"
+                android:layout_width="135dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/white"
+                android:background="@drawable/button_input"
+                android:gravity="center"
+                android:text="Register" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="74dp"
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="Already have an account?"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/registerText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginHorizontal="11dp"
+                    android:text="Sign In"
+                    android:textColor="#11597A"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
