@@ -16,6 +16,7 @@ import retrofit2.Response;
 import tech.halitpractice.OZKVeterinaryClient.Models.LoginModel;
 import tech.halitpractice.OZKVeterinaryClient.R;
 import tech.halitpractice.OZKVeterinaryClient.RestApi.ManagerAll;
+import tech.halitpractice.OZKVeterinaryClient.Utils.GetSharedPreferences;
 import tech.halitpractice.OZKVeterinaryClient.Utils.Warnings;
 
 public class GirisYapActivity extends AppCompatActivity {
@@ -76,6 +77,8 @@ public class GirisYapActivity extends AppCompatActivity {
                 if (response.body().isTf()) {
                     Toast.makeText(getApplicationContext(), response.body().getText(), Toast.LENGTH_LONG).show();
                     Intent intent = new Intent(GirisYapActivity.this,MainActivity.class);
+                    GetSharedPreferences getSharedPreferences = new GetSharedPreferences(GirisYapActivity.this);
+                    getSharedPreferences.setSession(response.body().getId(),response.body().getUsername(),response.body().getMailadres());
                     startActivity(intent);
                     finish();
                 }else {
