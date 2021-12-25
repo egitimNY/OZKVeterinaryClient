@@ -5,10 +5,12 @@ import java.util.List;
 import retrofit2.Call;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
+import retrofit2.http.GET;
 import retrofit2.http.POST;
 import tech.halitpractice.OZKVeterinaryClient.Models.AnswerModel;
 import tech.halitpractice.OZKVeterinaryClient.Models.AskQuestionModel;
 import tech.halitpractice.OZKVeterinaryClient.Models.DeleteAnswerModel;
+import tech.halitpractice.OZKVeterinaryClient.Models.KampanyaModel;
 import tech.halitpractice.OZKVeterinaryClient.Models.LoginModel;
 import tech.halitpractice.OZKVeterinaryClient.Models.PetModel;
 import tech.halitpractice.OZKVeterinaryClient.Models.RegisterPojo;
@@ -38,5 +40,10 @@ public interface RestApi {
     @FormUrlEncoded
     @POST("/veteriner/cevapSil.php")
     Call<DeleteAnswerModel> deleteAnswer(@Field("cevap") String cevapid, @Field("soru") String soruid);
+
+    @GET("/veteriner/kampanya.php")
+    Call<List<KampanyaModel>> getKampanya();
+
+
 
 }

@@ -6,6 +6,7 @@ import retrofit2.Call;
 import tech.halitpractice.OZKVeterinaryClient.Models.AnswerModel;
 import tech.halitpractice.OZKVeterinaryClient.Models.AskQuestionModel;
 import tech.halitpractice.OZKVeterinaryClient.Models.DeleteAnswerModel;
+import tech.halitpractice.OZKVeterinaryClient.Models.KampanyaModel;
 import tech.halitpractice.OZKVeterinaryClient.Models.LoginModel;
 import tech.halitpractice.OZKVeterinaryClient.Models.PetModel;
 import tech.halitpractice.OZKVeterinaryClient.Models.RegisterPojo;
@@ -51,6 +52,12 @@ public class ManagerAll extends BaseManager{
     public Call<DeleteAnswerModel> deleteAnswer(String cevap , String soru)
     {
         Call<DeleteAnswerModel> x = getRestApi().deleteAnswer(cevap,soru);
+        return  x ;
+    }
+
+    public Call<List<KampanyaModel>> getKampanya()
+    {
+        Call<List<KampanyaModel>> x = getRestApi().getKampanya();
         return  x ;
     }
 
