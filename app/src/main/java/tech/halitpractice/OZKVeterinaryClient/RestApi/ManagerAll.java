@@ -4,6 +4,7 @@ import java.util.List;
 
 import retrofit2.Call;
 import tech.halitpractice.OZKVeterinaryClient.Models.AnswerModel;
+import tech.halitpractice.OZKVeterinaryClient.Models.AsiModel;
 import tech.halitpractice.OZKVeterinaryClient.Models.AskQuestionModel;
 import tech.halitpractice.OZKVeterinaryClient.Models.DeleteAnswerModel;
 import tech.halitpractice.OZKVeterinaryClient.Models.KampanyaModel;
@@ -58,6 +59,11 @@ public class ManagerAll extends BaseManager{
     public Call<List<KampanyaModel>> getKampanya()
     {
         Call<List<KampanyaModel>> x = getRestApi().getKampanya();
+        return  x ;
+    }
+
+    public Call<List<AsiModel>> getAsi(String id) {
+        Call<List<AsiModel>> x = getRestApi().getAsi(id);
         return  x ;
     }
 

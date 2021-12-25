@@ -8,6 +8,7 @@ import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
 import tech.halitpractice.OZKVeterinaryClient.Models.AnswerModel;
+import tech.halitpractice.OZKVeterinaryClient.Models.AsiModel;
 import tech.halitpractice.OZKVeterinaryClient.Models.AskQuestionModel;
 import tech.halitpractice.OZKVeterinaryClient.Models.DeleteAnswerModel;
 import tech.halitpractice.OZKVeterinaryClient.Models.KampanyaModel;
@@ -44,6 +45,9 @@ public interface RestApi {
     @GET("/veteriner/kampanya.php")
     Call<List<KampanyaModel>> getKampanya();
 
+    @FormUrlEncoded
+    @POST("/veteriner/asitakip.php")
+    Call<List<AsiModel>> getAsi(@Field("id") String id);
 
 
 }

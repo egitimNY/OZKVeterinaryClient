@@ -34,7 +34,7 @@ import tech.halitpractice.OZKVeterinaryClient.adapters.AnswersAdapter;
 public class HomeFragment extends Fragment {
 
     private View view;
-    private LinearLayout petlerimLayout,soruSorLinerLayout,cevapLayout,kampanyaLinearLayout;
+    private LinearLayout petlerimLayout,soruSorLinerLayout,cevapLayout,kampanyaLinearLayout,asiTakipLayout;
     private ChangeFragments changeFragments;
     private GetSharedPreferences getSharedPreferences;
     private String id;
@@ -55,6 +55,8 @@ public class HomeFragment extends Fragment {
         petlerimLayout = view.findViewById(R.id.petlerimLayout);
         soruSorLinerLayout = view.findViewById(R.id.soruSorLinerLayout);
         cevapLayout = view.findViewById(R.id.cevapLayout);
+        asiTakipLayout = view.findViewById(R.id.asiTakipLayout);
+
         answerList = new ArrayList<>();
         kampanyaLinearLayout = view.findViewById(R.id.kampanyaLinearLayout);
         changeFragments = new ChangeFragments(getContext());
@@ -86,6 +88,12 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 changeFragments.change(new KampanyaFragment());
+            }
+        });
+        asiTakipLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                changeFragments.change(new AsiFragment());
             }
         });
     }
