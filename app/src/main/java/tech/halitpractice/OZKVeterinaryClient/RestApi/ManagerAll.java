@@ -1,7 +1,10 @@
 package tech.halitpractice.OZKVeterinaryClient.RestApi;
 
+import java.util.List;
+
 import retrofit2.Call;
 import tech.halitpractice.OZKVeterinaryClient.Models.LoginModel;
+import tech.halitpractice.OZKVeterinaryClient.Models.PetModel;
 import tech.halitpractice.OZKVeterinaryClient.Models.RegisterPojo;
 
 public class ManagerAll extends BaseManager{
@@ -22,6 +25,12 @@ public class ManagerAll extends BaseManager{
     public Call<LoginModel> girisYap(String mail , String parola)
     {
         Call<LoginModel> x = getRestApi().loginUser(mail,parola);
+        return  x ;
+    }
+
+    public Call<List<PetModel>> getPets(String id)
+    {
+        Call<List<PetModel>> x = getRestApi().getPets(id);
         return  x ;
     }
 
