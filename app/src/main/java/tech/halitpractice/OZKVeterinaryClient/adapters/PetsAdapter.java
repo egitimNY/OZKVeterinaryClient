@@ -37,9 +37,9 @@ public class PetsAdapter extends RecyclerView.Adapter<PetsAdapter.ViewHolder>{
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
 
-        holder.petLayoutCinsName.setText("Pet Cinsi: " +list.get(position).getPetcins().toString());
-        holder.petLayoutPetName.setText("Pet Ismi: " +list.get(position).getPetisim().toString());
-        holder.petLayoutTurName.setText("Pet Turu: " +list.get(position).getPettur().toString());
+        holder.petLayoutCinsName.setText("Pet Breed: " +list.get(position).getPetcins().toString());
+        holder.petLayoutPetName.setText("Pet Name: " +list.get(position).getPetisim().toString());
+        holder.petLayoutTurName.setText("Pet Type: " +list.get(position).getPettur().toString());
 
 //        Picasso.get().load(list.get(position).getPetresim()).into(holder.petLayoutPetImage);
         Picasso.get().load(list.get(position).getPetresim()).into(holder.petLayoutPetImage);

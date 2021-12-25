@@ -66,9 +66,9 @@ public class UserPetsFragment extends Fragment {
                     petList = response.body();
                     petsAdapter = new PetsAdapter(petList,getContext());
                     petListRecyclerView.setAdapter(petsAdapter);
-                    Toast.makeText(getContext(), " Sistemde kayitli " +petList.size() + " petiniz bulunmaktadir ", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getContext(), " Registered in the system " +petList.size() + " pet was found ", Toast.LENGTH_LONG).show();
                 }else {
-                    Toast.makeText(getContext(), " Sistemde kayitli petiniz bulunmamaktadir ", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getContext(), " You don't have a registered pet in the system ", Toast.LENGTH_LONG).show();
                     changeFragments.change(new HomeFragment());
                 }
             }
