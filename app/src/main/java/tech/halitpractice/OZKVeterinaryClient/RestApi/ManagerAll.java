@@ -3,6 +3,7 @@ package tech.halitpractice.OZKVeterinaryClient.RestApi;
 import java.util.List;
 
 import retrofit2.Call;
+import tech.halitpractice.OZKVeterinaryClient.Models.AnswerModel;
 import tech.halitpractice.OZKVeterinaryClient.Models.AskQuestionModel;
 import tech.halitpractice.OZKVeterinaryClient.Models.LoginModel;
 import tech.halitpractice.OZKVeterinaryClient.Models.PetModel;
@@ -38,6 +39,11 @@ public class ManagerAll extends BaseManager{
     public Call<AskQuestionModel> soruSor(String id , String soru)
     {
         Call<AskQuestionModel> x = getRestApi().soruSor(id,soru);
+        return  x ;
+    }
+
+    public Call<List<AnswerModel>> getAnswer(String id) {
+        Call<List<AnswerModel>> x = getRestApi().getAnswer(id);
         return  x ;
     }
 

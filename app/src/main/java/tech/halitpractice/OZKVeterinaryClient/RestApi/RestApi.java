@@ -6,6 +6,7 @@ import retrofit2.Call;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.POST;
+import tech.halitpractice.OZKVeterinaryClient.Models.AnswerModel;
 import tech.halitpractice.OZKVeterinaryClient.Models.AskQuestionModel;
 import tech.halitpractice.OZKVeterinaryClient.Models.LoginModel;
 import tech.halitpractice.OZKVeterinaryClient.Models.PetModel;
@@ -28,5 +29,9 @@ public interface RestApi {
     @FormUrlEncoded
     @POST("/veteriner/sorusor.php")
     Call<AskQuestionModel> soruSor(@Field("id") String id, @Field("soru") String soru);
+
+    @FormUrlEncoded
+    @POST("/veteriner/cevaplar.php")
+    Call<List<AnswerModel>> getAnswer(@Field("mus_id") String mus_id);
 
 }
