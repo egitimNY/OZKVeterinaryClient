@@ -8,6 +8,7 @@ import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.POST;
 import tech.halitpractice.OZKVeterinaryClient.Models.AnswerModel;
 import tech.halitpractice.OZKVeterinaryClient.Models.AskQuestionModel;
+import tech.halitpractice.OZKVeterinaryClient.Models.DeleteAnswerModel;
 import tech.halitpractice.OZKVeterinaryClient.Models.LoginModel;
 import tech.halitpractice.OZKVeterinaryClient.Models.PetModel;
 import tech.halitpractice.OZKVeterinaryClient.Models.RegisterPojo;
@@ -33,5 +34,9 @@ public interface RestApi {
     @FormUrlEncoded
     @POST("/veteriner/cevaplar.php")
     Call<List<AnswerModel>> getAnswer(@Field("mus_id") String mus_id);
+
+    @FormUrlEncoded
+    @POST("/veteriner/cevapSil.php")
+    Call<DeleteAnswerModel> deleteAnswer(@Field("cevap") String cevapid, @Field("soru") String soruid);
 
 }
