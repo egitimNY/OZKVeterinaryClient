@@ -15,7 +15,7 @@
         android:layout_marginBottom="10dp"
         android:gravity="center"
         android:textStyle="bold"
-        android:text="Asi Olmus Petleriniz"/>
+        android:text="Your Vaccinated Pets"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_marginTop="5dp"

@@ -16,7 +16,7 @@
         android:layout_marginBottom="10dp"
         android:gravity="center"
         android:textStyle="bold"
-        android:text="Petleriniz"/>
+        android:text="Your Pets"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/petListRecyclerView"

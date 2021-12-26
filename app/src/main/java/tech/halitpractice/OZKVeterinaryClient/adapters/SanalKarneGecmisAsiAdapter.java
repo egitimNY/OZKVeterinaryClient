@@ -40,8 +40,7 @@ public class SanalKarneGecmisAsiAdapter extends RecyclerView.Adapter<SanalKarneG
 //        holder.sanalKarneGecmisAsiText.setText(list.get(position).getAsiisim().toString()+" asisi yapilmistir.");
         holder.sanalKarneGecmisAsiText.setText(list.get(position).getAsiisim().toString()+" the vaccine has been made");
 //        holder.sanalKarneGecmisAsiBilgi.setText(list.get(position).getPetisim().toString()+" isimli petinize"+"\r"+list.get(position).getAsitarih()+ " tarihinde " + list.get(position).getAsiisim()+" asisi yapilmistir.");
-        holder.sanalKarneGecmisAsiBilgi.setText("Name of "+list.get(position).getPetisim().toString()+" "+"\r"
-                +list.get(position).getAsitarih()+ " on this time " + list.get(position).getAsiisim()+" the (vaccine) has been made.");
+        holder.sanalKarneGecmisAsiBilgi.setText("Name of "+list.get(position).getPetisim().toString()+" "+"\r" +list.get(position).getAsitarih()+ " on this time " + list.get(position).getAsiisim()+" the (vaccine) has been made.");
         Picasso.get().load(list.get(position).getPetresim().toString()).into(holder.sanalKarneGecmisAsiImage);
 
     }

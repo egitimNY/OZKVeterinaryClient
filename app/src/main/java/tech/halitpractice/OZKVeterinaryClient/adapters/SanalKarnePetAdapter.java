@@ -41,9 +41,14 @@ public class SanalKarnePetAdapter extends RecyclerView.Adapter<SanalKarnePetAdap
     public void onBindViewHolder(@NonNull ViewHolder holder, final int position) {
 
         holder.sanalKarnePetText.setText(list.get(position).getPetisim().toString());
-        holder.sanalKarneBilgiText.setText(list.get(position).getPetisim().toString()+" isimli "+
-                list.get(position).getPettur()+" türünün "+list.get(position).getPetcins()+" cinsine ait petinizin gecmis " +
-                "asilarini görmek için tiklayiniz..." );
+//        holder.sanalKarneBilgiText.setText(list.get(position).getPetisim().toString()+" isimli "+ list.get(position).getPettur()+" türünün "+list.get(position).getPetcins()+" cinsine ait petinizin gecmis " + "asilarini görmek için tiklayiniz..." );
+        holder.sanalKarneBilgiText.setText("Name of "+list.get(position).getPetisim().toString()+" "+
+                list.get(position).getPettur()+". The type of "+list.get(position).getPetcins()+". Click to see,  "
+                + "your pet's past vaccinations..." );
+
+//        holder.sanalKarneGecmisAsiBilgi.setText("Name of "+list.get(position).getPetisim().toString()+" "+"\r"
+//                +list.get(position).getAsitarih()+ " on this time " + list.get(position).getAsiisim()+" the (vaccine) has been made.");
+
 
 //        Picasso.get().load(list.get(position).getPetresim()).into(holder.petLayoutPetImage);
 
