@@ -48,7 +48,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="5"
-                        android:text="Pet Virtual Report"
+                        android:text="Pet History Rebel Tracking"
                         android:textColor="#41bce6"
                         android:textSize="20dp"
                         android:textStyle="bold" />
