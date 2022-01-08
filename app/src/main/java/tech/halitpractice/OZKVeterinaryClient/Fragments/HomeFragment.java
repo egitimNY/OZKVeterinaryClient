@@ -18,6 +18,8 @@ import com.google.android.material.button.MaterialButton;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Timer;
+import java.util.TimerTask;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -41,6 +43,8 @@ public class HomeFragment extends Fragment {
     private AnswersAdapter answersAdapter;
     private List<AnswerModel> answerList;
 
+    Timer timer;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -48,7 +52,23 @@ public class HomeFragment extends Fragment {
         view = inflater.inflate(R.layout.fragment_home, container, false);
         tanimla();
         action();
+//        timeSharedDelete();
         return view;
+
+    }
+
+    public void timeSharedDelete(){
+        timer = new Timer();
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+//                changeFragments.change(new HomeFragment());
+                getSharedPreferences.deleteToSession();
+//                Intent intent= new Intent(getActivity(), MainActivity.class);
+//                    startActivity(intent);
+
+            }
+        },5000);
     }
 
     private void tanimla() {
@@ -70,7 +90,7 @@ public class HomeFragment extends Fragment {
         petlerimLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                changeFragments.change(new UserPetsFragment());
+                changeFragments.changeBack(new UserPetsFragment());
             }
         });
         soruSorLinerLayout.setOnClickListener(new View.OnClickListener() {
@@ -88,19 +108,19 @@ public class HomeFragment extends Fragment {
         kampanyaLinearLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                changeFragments.change(new KampanyaFragment());
+                changeFragments.changeBack(new KampanyaFragment());
             }
         });
         asiTakipLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                changeFragments.change(new AsiFragment());
+                changeFragments.changeBack(new AsiFragment());
             }
         });
         sanalKarneLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                changeFragments.change(new SanalKarnePetlerFragment());
+                changeFragments.changeBack(new SanalKarnePetlerFragment());
             }
         });
     }
