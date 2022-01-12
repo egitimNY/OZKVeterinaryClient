@@ -2,6 +2,7 @@ package tech.halitpractice.OZKVeterinaryClient.Fragments;
 
 import android.app.AlertDialog;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -67,8 +68,6 @@ public class AsiFragment extends Fragment {
         getSharedPreferences = new GetSharedPreferences(getActivity());
         id = getSharedPreferences.getSession().getString("id",null);
 
-
-
     }
 
     public void getAsi(){
@@ -80,15 +79,15 @@ public class AsiFragment extends Fragment {
                     if (response.body().get(0).isTf()) {
                         asiList = response.body();
                         for (int i = 0; i < asiList.size(); i++) {
-//                            Log.i("asilar", response.body().toString());
+                            Log.i("asilar", response.body().toString());
                             String dataString = response.body().get(i).getAsitarih().toString();
                             try {
                                 Date date = format.parse(dataString);
-                                if(today.compareTo(date) < 0 && nextYear.getTime().compareTo(date) > 0) {
+//                                if(today.compareTo(date) < 0 && nextYear.getTime().compareTo(date) > 0) {
                                     dateList.add(date);
-                                } else {
-                                    Toast.makeText(getContext(), "You missed the date of appointment", Toast.LENGTH_LONG).show();
-                                }
+//                                } else {
+//                                    Toast.makeText(getContext(), "You missed the date of appointment", Toast.LENGTH_LONG).show();
+//                                }
                             } catch (ParseException e) {
                                 e.printStackTrace();
                             }
@@ -119,6 +118,7 @@ public class AsiFragment extends Fragment {
 
                     if (date.toString().equals(dateList.get(i).toString())){
 //                        Toast.makeText(getContext(), asiList.get(i).getPetisim().toString(), Toast.LENGTH_LONG).show();
+//                        Log.i( "calendarSelected: "+asiList.get(i).getPetisim(),asiList.get(i).getPetresim());
                         openQuestionAlert(asiList.get(i).getPetisim(),asiList.get(i).getPettur(),asiList.get(i).getAsitarih(), asiList.get(i).getAsiisim(),asiList.get(i).getPetresim());
                     }
 
