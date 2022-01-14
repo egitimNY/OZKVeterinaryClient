@@ -2,7 +2,6 @@ package tech.halitpractice.OZKVeterinaryClient.Fragments;
 
 import android.app.AlertDialog;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -79,12 +78,13 @@ public class AsiFragment extends Fragment {
                     if (response.body().get(0).isTf()) {
                         asiList = response.body();
                         for (int i = 0; i < asiList.size(); i++) {
-                            Log.i("asilar", response.body().toString());
+//                            Log.i("asilar", response.body().toString());
                             String dataString = response.body().get(i).getAsitarih().toString();
                             try {
                                 Date date = format.parse(dataString);
+                                dateList.add(date);
 //                                if(today.compareTo(date) < 0 && nextYear.getTime().compareTo(date) > 0) {
-                                    dateList.add(date);
+//                                    dateList.add(date);
 //                                } else {
 //                                    Toast.makeText(getContext(), "You missed the date of appointment", Toast.LENGTH_LONG).show();
 //                                }
