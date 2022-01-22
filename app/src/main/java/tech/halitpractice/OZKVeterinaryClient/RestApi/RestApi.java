@@ -19,7 +19,7 @@ import tech.halitpractice.OZKVeterinaryClient.Models.RegisterPojo;
 public interface RestApi {
 
     @FormUrlEncoded
-    @POST("/veteriner/kayitol.php")
+    @POST("/veteriner/kayitolMuh.php")
     Call<RegisterPojo> registerUser(@Field("mailAdres") String kayitol, @Field("kadi") String kadi, @Field("pass") String pass);
 
     @FormUrlEncoded

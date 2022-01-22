@@ -83,11 +83,13 @@ public class AsiFragment extends Fragment {
                             try {
                                 Date date = format.parse(dataString);
                                 dateList.add(date);
-//                                if(today.compareTo(date) < 0 && nextYear.getTime().compareTo(date) > 0) {
-//                                    dateList.add(date);
-//                                } else {
-//                                    Toast.makeText(getContext(), "You missed the date of appointment", Toast.LENGTH_LONG).show();
-//                                }
+                                /*
+                                if(today.compareTo(date) < 0 && nextYear.getTime().compareTo(date) > 0) {
+                                    dateList.add(date);
+                                } else {
+                                    Toast.makeText(getContext(), "You missed the date of appointment", Toast.LENGTH_SHORT).show();
+                                }
+                                */
                             } catch (ParseException e) {
                                 e.printStackTrace();
                             }
