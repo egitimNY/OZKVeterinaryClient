@@ -56,7 +56,7 @@ public class AsiFragment extends Fragment {
 
     public void tanimla(){
         calendarPickerView = view.findViewById(R.id.calendarPickerView);
-        format = new SimpleDateFormat("dd/MM/yyyy");
+        format = new SimpleDateFormat("yyyy-MM-dd");
         nextYear = Calendar.getInstance();
         nextYear.add(Calendar.YEAR,1);
         today = new Date();

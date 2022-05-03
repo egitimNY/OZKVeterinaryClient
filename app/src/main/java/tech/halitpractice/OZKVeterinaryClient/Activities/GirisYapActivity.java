@@ -11,6 +11,7 @@ import android.text.method.LinkMovementMethod;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -33,6 +34,7 @@ public class GirisYapActivity extends AppCompatActivity {
 
     private EditText loginMailAdres, loginPassword;
     private TextView loginText;
+    private LinearLayout forgetPass;
     private Button loginButton;
 
     public static final String TERMS_AND_CONDITIONS = "TERMS_AND_CONDITIONS";
@@ -90,6 +92,7 @@ public class GirisYapActivity extends AppCompatActivity {
         loginMailAdres = findViewById(R.id.loginMailAddress);
         loginPassword = findViewById(R.id.loginPassword);
         loginText = findViewById(R.id.loginText);
+        forgetPass = findViewById(R.id.forgetPass);
         loginButton = findViewById(R.id.loginButon);
     }
 
@@ -112,6 +115,16 @@ public class GirisYapActivity extends AppCompatActivity {
                 finish();
             }
         });
+
+        forgetPass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(GirisYapActivity.this, SifremiUnuttumActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
     }
 
     public void delete(){

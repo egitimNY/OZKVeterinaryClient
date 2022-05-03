@@ -15,8 +15,13 @@ import tech.halitpractice.OZKVeterinaryClient.Models.KampanyaModel;
 import tech.halitpractice.OZKVeterinaryClient.Models.LoginModel;
 import tech.halitpractice.OZKVeterinaryClient.Models.PetModel;
 import tech.halitpractice.OZKVeterinaryClient.Models.RegisterPojo;
+import tech.halitpractice.OZKVeterinaryClient.Models.SifremiUnuttumModel;
 
 public interface RestApi {
+
+//    @FormUrlEncoded
+//    @POST("/veteriner/kayitolMuh.php")
+//    Call<RegisterPojo> registerUser(@Field("mailAdres") String kayitol, @Field("kadi") String kadi, @Field("pass") String pass);
 
     @FormUrlEncoded
     @POST("/veteriner/kayitolMuh.php")
@@ -46,12 +51,17 @@ public interface RestApi {
     Call<List<KampanyaModel>> getKampanya();
 
     @FormUrlEncoded
-    @POST("/veteriner/asitakip.php")
+    @POST("/veteriner/asitakipMuh.php")
     Call<List<AsiModel>> getAsi(@Field("id") String id);
 
     @FormUrlEncoded
     @POST("/veteriner/gecmisasi.php")
     Call<List<AsiModel>> getGecmisAsi(@Field("id") String id, @Field("petid") String pet_id );
+
+    @FormUrlEncoded
+    @POST("/veteriner/sifremiUnuttum.php")
+    Call<SifremiUnuttumModel> sifreniSikim(@Field("mail") String mailadres);
+
 
 
 }

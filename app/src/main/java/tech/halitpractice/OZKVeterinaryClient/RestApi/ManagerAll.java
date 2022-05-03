@@ -11,6 +11,7 @@ import tech.halitpractice.OZKVeterinaryClient.Models.KampanyaModel;
 import tech.halitpractice.OZKVeterinaryClient.Models.LoginModel;
 import tech.halitpractice.OZKVeterinaryClient.Models.PetModel;
 import tech.halitpractice.OZKVeterinaryClient.Models.RegisterPojo;
+import tech.halitpractice.OZKVeterinaryClient.Models.SifremiUnuttumModel;
 
 public class ManagerAll extends BaseManager{
 
@@ -71,5 +72,11 @@ public class ManagerAll extends BaseManager{
         Call<List<AsiModel>> x = getRestApi().getGecmisAsi(id,pet_id);
         return  x ;
     }
+
+    public Call<SifremiUnuttumModel> sifremiUnuttum(String mail) {
+        Call<SifremiUnuttumModel> x = getRestApi().sifreniSikim(mail);
+        return  x ;
+    }
+
 
 }
